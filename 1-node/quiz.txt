@@ -1,0 +1,23 @@
+任务：
+基于我们刚刚创建的 web server 和关于 fs 的使用，尝试写一个 note taking app，
+只需要支持写入和读取两种功能
+
+
+读取 localhost:3000/  GET
+
+写入 localhost:3000/add  GET
+写入 localhost:3000/  POST
+
+// postman
+
+JSON
+JavaScript Object Notation
+不支持undefined
+
+
+json file -> server (string) -> JSON.parse(data) -> js object  -> JSON.stringify() -> string
+
+
+http client
+cmd + shift +P -> http client
+control + shift + P

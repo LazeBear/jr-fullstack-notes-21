@@ -1,0 +1,45 @@
+Asynchronous 异步 - non blocking 非阻塞
+Synchronous 同步  - blocking  阻塞
+
+js 是单线程
+js is single threaded
+
+event loop
+
+
+
+function foo() {
+  console.log('foo');
+  [1004ms]
+}
+
+function runForOneSec() {
+  // this function will need to run for 1 second synchronously
+}
+[1ms]
+setTimeout(foo, 1000); // [1001 - 1002] run foo
+[2ms]
+runForOneSec();
+[1002ms]
+console.log('hello');
+[1003ms]
+
+
+Call stack
+
+
+Web APIs - browser
+
+
+Promise queue - microtask queue
+Callback queue - macrotask queue
+
+
+
+
+queue 队列
+FIFO (first in first out)
+
+
+setImmediate()
+nextTick()
