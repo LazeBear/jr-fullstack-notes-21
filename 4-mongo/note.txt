@@ -1,0 +1,136 @@
+no-SQL
+
+SQL (structured query language)
+relational db
+关系型数据库
+mySQL
+postgresQL
+SQLite
+
+
+no-SQL
+document-oriented -> mongodb
+key-value -> redis
+graph-oriented -> neo4j
+column-family -> cassandra
+
+
+BSON -> Binary JSON
+
+field -> 字段
+collection -> 集合 （表）
+
+
+Create
+Read
+Update
+Delete
+
+CRUD
+
+（school）
+当前数据库 .collection name  .operation(操作)  （document or js object）
+db       .students         .insertOne       ({"name":"mason"})
+
+
+operator
+
+projection
+
+
+1:1
+user: address -> 1:1
+address: user -> 1:1
+
+1:M
+user:address -> 1:M
+address:user -> 1:1
+
+M:N
+user:address -> 1:M
+address:user -> 1:N
+
+
+users
+
+[
+  {
+    _id: 1,
+    name: "xx",
+    addresses: [
+      {
+        _id: 10,
+        city: "sydney",
+        postcode: 2001
+      },
+      {
+        _id: 11,
+        city: "brisbane",
+        postcode: 4000
+      }
+    ]
+  },
+  {
+    _id: 2,
+    name: "yy",
+    addresses: [
+      {
+        _id: 10,
+        city: "sydney",
+        postcode: 2001
+      },
+      {
+        _id: 11,
+        city: "brisbane",
+        postcode: 4000
+      }
+    ]
+  }
+]
+
+
+
+users
+[
+  {
+    _id: 1,
+    name: "xx",
+    addresses: [
+      {_id: 10, postcode: 2010},
+      {_id: 11, postcode: 4000}
+    ]
+  },
+  {
+    _id: 2,
+    name: "yy",
+    addresses: [
+      {_id: 10, postcode: 2010},
+      {_id: 11, postcode: 4000}
+    ]
+  }
+]
+
+addresses
+[
+  {
+    _id: 10,
+    city: "sydney",
+    postcode: 2010,
+    students: [
+      _id:1,
+      _id:2,
+    ]
+  },
+  {
+    _id: 11,
+    city: "brisbane",
+    postcode: 4000,
+    students: [
+      _id:1,
+      _id:2,
+    ]
+  }
+]
+
+
+document 16mb -> mongodb

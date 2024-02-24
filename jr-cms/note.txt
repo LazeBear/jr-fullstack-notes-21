@@ -1,0 +1,40 @@
+CMS (content management system)
+
+博客
+电商
+
+
+学校school
+jr-CMS
+
+student
+teacher
+course
+
+user
+
+LMS
+
+
+ERD (entity relational diagram)
+
+
+hackolade
+moon modeler
+lucid chart
+draw.io
+
+
+elasticsearch + kibana
+
+
+
+
+
+student.controller.js
+students.controller.js
+controllers/students.js
+
+
+mongodb compass
+
