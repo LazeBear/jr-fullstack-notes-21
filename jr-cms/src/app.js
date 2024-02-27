@@ -6,9 +6,11 @@ const config = require('./config');
 const getLogger = require('./common/logger');
 const morgan = require('./common/morgan');
 const formatResponseMiddleware = require('./middleware/formatResponse.middleware');
-const notFoundMiddleware = require('./middleware/notFound.middleware');
+const pathNotFoundMiddleware = require('./middleware/pathNotFound.middleware');
 const unknownErrorMiddleware = require('./middleware/errorMiddleware/unknownError.middleware');
 const connectToDb = require('./common/utils/db');
+const validationErrorMiddleware = require('./middleware/errorMiddleware/validationError.middleware');
+const notFoundErrorMiddleware = require('./middleware/errorMiddleware/notFoundError.middleware');
 
 const logger = getLogger(__filename);
 
@@ -22,8 +24,10 @@ app.use(morgan);
 
 app.use('/v1', v1Router);
 
-app.use(notFoundMiddleware);
+app.use(pathNotFoundMiddleware);
 
+app.use(validationErrorMiddleware);
+app.use(notFoundErrorMiddleware);
 app.use(unknownErrorMiddleware);
 
 connectToDb().then(() => {

@@ -38,3 +38,6 @@ controllers/students.js
 
 mongodb compass
 
+sql -> cascade delete 级联删除
+
+
