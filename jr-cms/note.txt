@@ -41,3 +41,67 @@ mongodb compass
 sql -> cascade delete 级联删除
 
 
+
+Hash 哈希
+不可逆
+
+加密 (Encrypt) -> 解密 (Decrypt)
+x -> X
+X -> x
+可逆
+
+hash
+x -> X
+x -> X
+
+rainbow table
+dictionary
+brutal force
+
+hash + salt (randomly generated)
+x + salt1 -> X1 + salt1
+x + salt2 -> X2 + salt2
+
+x' + salt1 -> X1' === X1 + salt1
+
+
+(pepper)
+
+bcrypt
+
+
+Session and cookie
+SSR (server-side rendering)
+session id -> cookie
+CSRF
+
+
+
+jwt
+stateless
+cross-domain
+
+CSR
+
+
+
+multiple roles
+Admin -> delete
+User -> add, post, patch, put
+
+Access control
+RBAC -> role based AC
+ABAC -> attribute based AC
+
+
+CSR
+MY APP FE/Login page  -> Login with Google -> redirect to Google login page
+-> login to google -> google authenticate -> ask for permission to give data to MY APP ->
+Ask specific access data -> google redirect you back to MY APP FE (with a token) ->
+FE send token back to MY APP BE -> BE get user data from Google with token ->
+Google return info like email and username
+-> BE need to store this email and username to it's own DB's User collection
+-> Need another collection like (userSso)
+-> MY APP BE generate token and return to FE
+
+passport.js

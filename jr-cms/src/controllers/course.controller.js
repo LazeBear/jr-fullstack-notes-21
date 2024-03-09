@@ -118,6 +118,7 @@ const updateCourseById = async (req, res, next) => {
   }
 };
 const deleteCourseById = async (req, res, next) => {
+  // Access checker
   try {
     const { id } = req.params;
     const course = await Course.findByIdAndDelete(id).exec();
