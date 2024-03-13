@@ -1,10 +1,11 @@
 const winston = require('winston');
 const path = require('path');
+const config = require('../config');
 
 // __filename
 const getLogger = (filename) => {
   const logger = winston.createLogger({
-    level: 'info',
+    level: config.NODE_ENV === 'test' ? 'warning' : 'info',
     defaultMeta: {
       file: filename ? path.basename(filename) : undefined,
     },

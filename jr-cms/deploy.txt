@@ -1,0 +1,29 @@
+
+AWS
+Elastic beanstalk
+EC2 + environemnt setup + load balancer + monitoring ...
+(linux)
+
+Code pipeline
+CI/CD
+continous integration / continous deployment
+Github repo (new change) -> code pipeline -> pull the new code -> deploy to elasticbeanstalk
+CI (Github actions)
+
+IAM
+Identity Access Management
+Permission control
+ssh
+
+
+MongoDB Atlas
+cloud database
+
+
+PM2
+process manager 2
+"start":"pm2 start src/index.js --name jrCms",
+"stop":"pm2 stop jrCms",
+"poststart": "pm2 log jrCms"
+
+docker + kubernete

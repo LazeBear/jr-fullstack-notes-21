@@ -1,0 +1,19 @@
+unit test 单元测试 - jest, mocha, jasmine
+integration test 集成测试 - supertest, selenium
+e2e test (end to end) 端到端测试 - selenium, cypress
+
+unit test with mock
+
+QA (tester)
+
+regression test
+
+
+TDD (test driven development)
+
+black box testing
+white box testing
+
+
+auth.controller.test.js
+__test__
